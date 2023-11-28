@@ -1,0 +1,73 @@
+Manipulação de Arrays e Strings
+Descrição: Exemplos de como trabalhar com arrays e strings em Java.
+java
+
+// Exemplo de manipulação de array
+int[] numeros = {1, 2, 3, 4, 5};
+for (int i = 0; i < numeros.length; i++) {
+    numeros[i] = numeros[i] * numeros[i];
+}
+System.out.println(Arrays.toString(numeros));
+
+// Exemplo de manipulação de string
+String mensagem = "Olá, Mundo!";
+String[] partes = mensagem.split(", ");
+System.out.println(Arrays.toString(partes));
+2. Estruturas Condicionais e Loops
+Descrição: Demonstração de estruturas condicionais e loops em Java.
+java
+
+// Exemplo de estrutura condicional
+int idade = 18;
+if (idade >= 18) {
+    System.out.println("Você é maior de idade.");
+} else {
+    System.out.println("Você é menor de idade.");
+}
+
+// Exemplo de loop
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+3. Métodos e Funções em Java
+Descrição: Definição e chamada de métodos e funções em Java.
+java
+
+// Exemplo de método
+public static String saudacao(String nome) {
+    return "Olá, " + nome + "!";
+}
+
+// Chamada de método
+String mensagem = saudacao("Alice");
+System.out.println(mensagem);
+4. Trabalhando com Listas em Java
+Descrição: Uso de Listas para armazenar e manipular dados em Java.
+java
+
+// Exemplo de Lista
+List<String> frutas = new ArrayList<>();
+frutas.add("Maçã");
+frutas.add("Banana");
+frutas.add("Morango");
+System.out.println(frutas.get(1));
+5. Manipulação de Arquivos em Java
+Descrição: Leitura e escrita básica de arquivos em Java.
+java
+
+// Exemplo de leitura de arquivo
+try (BufferedReader br = new BufferedReader(new FileReader("arquivo.txt"))) {
+    String linha;
+    while ((linha = br.readLine()) != null) {
+        System.out.println(linha);
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
+// Exemplo de escrita em arquivo
+try (BufferedWriter bw = new BufferedWriter(new FileWriter("novo_arquivo.txt"))) {
+    bw.write("Conteúdo do novo arquivo.");
+} catch (IOException e) {
+    e.printStackTrace();
+}
